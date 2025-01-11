@@ -13,6 +13,13 @@ app.get("/", (req, res) => {
     })
 })
 
+
+app.get("/user", (req, res) => {
+    res.json({
+        message: "Hello from user route"
+    })
+})
+
 app.post("/", async (req, res) => {
     await client.user.create({
         data: {
